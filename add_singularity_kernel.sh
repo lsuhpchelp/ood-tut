@@ -13,6 +13,7 @@ else
     exit 1
 fi
 
+# replace the image_dir with the path of the image "ojk.np.sif"
 sed -i "s|/image_dir/|$(pwd)/|g" $JUPYTER_KERNEL_FILE
 
 if [[ -f "$JUPYTER_KERNEL_FILE" ]]; then
