@@ -5,7 +5,7 @@
   "-B",
   "/work,/project,/usr/local/packages,/var/scratch",
   "--nv",
-  "/project/fchen14/ood-tut/ojk.sif",
+  "/image_dir/ojk.np.sif",
   "python3",
   "-m",
   "ipykernel_launcher",
