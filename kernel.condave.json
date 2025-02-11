@@ -1,0 +1,14 @@
+{
+ "argv": [
+  "~/.conda/envs/myenv/bin/python",
+  "-m",
+  "ipykernel_launcher",
+  "-f",
+  "{connection_file}"
+ ],
+ "display_name": "[Conda VE] Python 3.10",
+ "language": "python",
+ "metadata": {
+  "debugger": false
+ }
+}
