@@ -5,7 +5,9 @@ From: rockylinux:9
     dnf -y update && dnf clean all
     dnf -y install python3 python3-pip
     python3 -m pip install --upgrade pip
+    # this will install latest version of numpy, at the moment it will be 2.0.2
     #python3 -m pip install numpy ipykernel
+    # here we specify numpy==1.26.4
     python3 -m pip install numpy==1.26.4 ipykernel
 
 %environment
