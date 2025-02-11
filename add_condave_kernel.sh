@@ -8,6 +8,7 @@ if [[ -f "kernel.condave.json" ]]; then
 else
     echo "kernel.condave.json not found."
     echo "Did you git clone the entire repository?"
+    echo "git clone https://github.com/lsuhpchelp/ood-tut.git"
     echo "Exiting script."
     exit 1
 fi
