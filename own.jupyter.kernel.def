@@ -1,0 +1,17 @@
+BootStrap: docker
+From: rockylinux:9
+
+%post
+    dnf -y update && dnf clean all
+    dnf -y install python3 python3-pip
+    python3 -m pip install --upgrade pip
+    #python3 -m pip install numpy ipykernel
+    python3 -m pip install numpy==1.26.4 ipykernel
+
+%environment
+    export PATH="/usr/bin:$PATH"
+    export PYTHONPATH="/usr/lib/python3.9/site-packages:$PYTHONPATH"
+
+%runscript
+    exec python3 "$@"
+
