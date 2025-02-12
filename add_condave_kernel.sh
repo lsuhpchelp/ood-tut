@@ -13,6 +13,8 @@ else
     exit 1
 fi
 
+sed -i "s|/condave_dir/|$(pwd)/|g" $JUPYTER_KERNEL_FILE
+
 if [[ -f "$JUPYTER_KERNEL_FILE" ]]; then
     # Extract content within double quotes from line 8
     echo "kernel file is copied to:"

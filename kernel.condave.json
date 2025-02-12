@@ -1,6 +1,6 @@
 {
  "argv": [
-  "~/.conda/envs/myenv/bin/python",
+  "/condave_dir/myenv/bin/python",
   "-m",
   "ipykernel_launcher",
   "-f",
