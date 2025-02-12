@@ -3,17 +3,20 @@
 # Load Python module (adjust as needed for your system)
 module load python
 
+PFX=$(pwd -P)
+
 # Create Conda environment named "myenv" if it doesn't exist
-if ! conda info --envs | grep -q "^myenv "; then
-    echo "Creating Conda environment 'myenv'..."
+if ! conda info --envs | grep -q "$PFX/myenv "; then
+    echo "Creating Conda environment '$PFX/myenv'..."
     #conda create -y --name myenv python=3.10  # Adjust Python version if needed
-    conda create -y --prefix=$PWD/myenv python=3.10  # Adjust Python version if needed
+    conda create -y --prefix=$PFX/myenv python=3.10  # Adjust Python version if needed
 else
-    echo "Conda environment 'myenv' already exists. Skipping creation."
+    echo "Conda environment '$PFX/myenv' already exists. Skipping creation."
+    exit 1
 fi
 
 # Activate the Conda environment
-source activate $PWD/myenv
+source activate $PFX/myenv
 #conda install ipykernel
 #python -m ipykernel install --user --name myenv --display-name "Python (myenv)"
 
